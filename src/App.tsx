@@ -28,7 +28,9 @@ const App: React.FC = () => {
 
   const addTask = (text: string) => {
     const today = new Date();
-    const date = `${today.getDate().toString().padStart(2, "0")}/${(today.getMonth() + 1)
+    const date = `${today.getDate().toString().padStart(2, "0")}/${(
+      today.getMonth() + 1
+    )
       .toString()
       .padStart(2, "0")}`;
 
@@ -65,9 +67,16 @@ const App: React.FC = () => {
 
   return (
     <div className="container mx-auto mt-10 p-5 text-center">
-      <h1 className="text-3xl text-violet-500 font-bold mb-5">Task Management Application</h1>
-      <p className="text-green-500 mb-8">Organize your tasks efficiently and stay productive!</p>
-      <AddTask addTask={addTask} editTask={editTaskIndex !== null ? tasks[editTaskIndex] : null} />
+      <h1 className="text-3xl text-violet-500 font-bold mb-5">
+        Task Management Application
+      </h1>
+      <p className="text-green-500 mb-8">
+        Organize your tasks efficiently and stay productive!
+      </p>
+      <AddTask
+        addTask={addTask}
+        editTask={editTaskIndex !== null ? tasks[editTaskIndex] : null}
+      />
       <TaskList
         tasks={tasks}
         onDelete={deleteTask}
