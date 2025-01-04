@@ -1,8 +1,11 @@
 import React from "react";
 
+interface AddTaskProps {
+    addTask: (text: string) => void;
+    editTask: { id: number; text: string; completed: boolean } | null;
+  }
 
-
-const AddTask: React.FC = () => {
+const AddTask: React.FC<AddTaskProps> = () => {
   return (
     <div className="flex justify-center items-center mb-4">
       <input

@@ -2,6 +2,13 @@ import React from 'react';
 import AddTask from './components/AddTask';
 import TaskList from './components/TaskList';
 
+export interface Task {
+  id: number;
+  text: string;
+  date: string;
+  completed: boolean;
+}
+
 const App: React.FC = () => {
   return (
     <div className="container mx-auto mt-10 p-5 text-center">
