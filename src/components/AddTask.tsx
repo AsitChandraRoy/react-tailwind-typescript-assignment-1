@@ -36,7 +36,7 @@ const AddTask: React.FC<AddTaskProps> = ({ addTask, editTask }) => {
         onClick={handleSubmit}
         className="ml-2 px-4 py-2 text-white bg-lime-500 rounded-md hover:bg-lime-600"
       >
-        Add
+        {editTask ? "Save" : "Add"}
       </button>
     </div>
   );
