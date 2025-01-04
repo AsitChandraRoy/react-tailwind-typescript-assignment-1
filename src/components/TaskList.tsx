@@ -10,7 +10,7 @@ interface TaskListProps {
 
 const TaskList: React.FC<TaskListProps> = ({ tasks, onDelete, onEdit, onToggleStatus }) => {
   return (
-    <table className="mx-auto mt-7 border w-3/4">
+    <table className="mx-auto mt-7 border w-3/4 shadow-2xl rounded-lg">
       <thead>
         <tr className="border bg-gray-100">
           <th className="p-2">Num</th>
